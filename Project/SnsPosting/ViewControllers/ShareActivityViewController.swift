@@ -4,25 +4,10 @@ class ShareActivityViewController: BasicViewController {
 
     private let message = "Share message."
     private let urlString = "https://www.google.co.jp"
-    private var image: UIImage!
-    
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var shareButton: UIButton!
+
     @IBOutlet weak var messageSwitch: UISwitch!
     @IBOutlet weak var urlSwitch: UISwitch!
     @IBOutlet weak var imageSwitch: UISwitch!
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if let img = UIImage(named: "SharePhoto") {
-            image = img
-            imageView.image = image
-        } else {
-            let alert = UIAlertController(title: "Error", message: "No photo for testing.", preferredStyle: .Alert)
-            presentViewController(alert, animated: true, completion: nil)
-        }
-    }
     
     @IBAction func onShareButton(sender: AnyObject) {
         var items = [AnyObject]()
