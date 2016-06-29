@@ -73,6 +73,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zF-aD-kFa">
                                 <rect key="frame" x="137" y="518" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onShareButton:" destination="AN1-N1-QNR" eventType="touchUpInside" id="tML-8l-0pu"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jKQ-zb-bBt">
                                 <rect key="frame" x="40" y="164" width="240" height="240"/>
@@ -94,7 +97,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="jKQ-zb-bBt" id="9ez-AB-45U"/>
-                        <outlet property="shareButton" destination="2zF-aD-kFa" id="HB7-hl-xXL"/>
+                        <outlet property="shareButton" destination="2zF-aD-kFa" id="bEA-vo-keu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFq-A8-2eI" userLabel="First Responder" sceneMemberID="firstResponder"/>
