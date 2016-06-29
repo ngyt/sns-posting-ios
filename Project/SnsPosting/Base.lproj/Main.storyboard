@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="her-iQ-kt1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -16,12 +16,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHv-6J-pXn">
+                                <rect key="frame" x="110" y="269" width="100" height="30"/>
+                                <state key="normal" title="Share Actitvity"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y91-Zl-PPf">
+                                <rect key="frame" x="98" y="339" width="124" height="30"/>
+                                <state key="normal" title="Instagram Service"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y91-Zl-PPf" firstAttribute="top" secondItem="qHv-6J-pXn" secondAttribute="bottom" constant="40" id="PwS-pa-imB"/>
+                            <constraint firstItem="qHv-6J-pXn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pt2-Zp-p5i"/>
+                            <constraint firstItem="qHv-6J-pXn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qev-Yp-J3l"/>
+                            <constraint firstItem="y91-Zl-PPf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rQ0-xG-Nhw"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7Ia-nF-5UT"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="Ibg-0G-Ii9" kind="show" identifier="TopToActivity" id="4A2-OC-oJf"/>
+                        <segue destination="AN1-N1-QNR" kind="show" identifier="TopToInstagram" id="F16-KY-tMP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="490" y="537"/>
+        </scene>
+        <!--Instagram Service View Controller-->
+        <scene sceneID="426-CR-gZ5">
+            <objects>
+                <viewController id="AN1-N1-QNR" customClass="InstagramServiceViewController" customModule="SnsPosting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1ry-xY-aNQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="6wM-oX-UZP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="if9-7f-vRt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fFq-A8-2eI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965" y="875"/>
+        </scene>
+        <!--Share Activity View Controller-->
+        <scene sceneID="32i-lN-KMH">
+            <objects>
+                <viewController id="Ibg-0G-Ii9" customClass="ShareActivityViewController" customModule="SnsPosting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mGy-XP-3jt"/>
+                        <viewControllerLayoutGuide type="bottom" id="bY0-7Q-J1w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kun-gx-aHs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EEA-5s-xqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965" y="220"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lrH-iC-tWj">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="her-iQ-kt1" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C5i-hb-sKS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fqH-jO-syg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="26Y-hZ-hFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="537"/>
         </scene>
     </scenes>
 </document>
