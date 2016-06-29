@@ -16,6 +16,7 @@
 		15FDC83A1D23544900403077 /* InstagramServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FDC8361D23544900403077 /* InstagramServiceViewController.swift */; };
 		15FDC83B1D23544900403077 /* ShareActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FDC8371D23544900403077 /* ShareActivityViewController.swift */; };
 		15FDC83C1D23544900403077 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FDC8381D23544900403077 /* TopViewController.swift */; };
+		15FDC83E1D2355EF00403077 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FDC83D1D2355EF00403077 /* BasicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		15FDC8361D23544900403077 /* InstagramServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramServiceViewController.swift; sourceTree = "<group>"; };
 		15FDC8371D23544900403077 /* ShareActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareActivityViewController.swift; sourceTree = "<group>"; };
 		15FDC8381D23544900403077 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		15FDC83D1D2355EF00403077 /* BasicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +116,10 @@
 		15FDC8351D23544900403077 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				15FDC83D1D2355EF00403077 /* BasicViewController.swift */,
+				15FDC8381D23544900403077 /* TopViewController.swift */,
 				15FDC8361D23544900403077 /* InstagramServiceViewController.swift */,
 				15FDC8371D23544900403077 /* ShareActivityViewController.swift */,
-				15FDC8381D23544900403077 /* TopViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15FDC8391D23544900403077 /* LineActivity.swift in Sources */,
+				15FDC83E1D2355EF00403077 /* BasicViewController.swift in Sources */,
 				15FDC83B1D23544900403077 /* ShareActivityViewController.swift in Sources */,
 				15FACDDC1D2348BF00C751A8 /* AppDelegate.swift in Sources */,
 				15FDC83A1D23544900403077 /* InstagramServiceViewController.swift in Sources */,

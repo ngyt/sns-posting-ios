@@ -1,6 +1,6 @@
 import UIKit
 
-class ShareActivityViewController: UIViewController {
+class ShareActivityViewController: BasicViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

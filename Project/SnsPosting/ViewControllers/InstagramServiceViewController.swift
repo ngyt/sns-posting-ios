@@ -1,6 +1,6 @@
 import UIKit
 
-class InstagramServiceViewController: UIViewController {
+class InstagramServiceViewController: BasicViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
