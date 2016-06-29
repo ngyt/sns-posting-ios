@@ -14,8 +14,7 @@ class BasicViewController: UIViewController {
             imageView.image = image
         } else {
             shareButton.enabled = false
-            let alert = UIAlertController(title: "Error", message: "No photo for testing.", preferredStyle: .Alert)
-            presentViewController(alert, animated: true, completion: nil)
+            showAlert(title: "Error", message: "No photo for testing.")
         }
     }
 
@@ -23,4 +22,9 @@ class BasicViewController: UIViewController {
         navigationController?.popViewControllerAnimated(true)
     }
 
+    func showAlert(title title: String?, message: String?, actions: [UIAlertAction] = [UIAlertAction(title: "OK", style: .Default, handler: nil)]) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        _ = actions.map { alert.addAction($0) }
+        presentViewController(alert, animated: true, completion: nil)
+    }
 }

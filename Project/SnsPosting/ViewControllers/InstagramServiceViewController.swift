@@ -1,27 +1,22 @@
 import UIKit
 
 class InstagramServiceViewController: BasicViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+    private let instagramUrlString = "instagram://app"
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let instagramUrl = NSURL(string: instagramUrlString) else {
+            showAlert(title: "No Instagram", message: "Counld not find Instragram for sharing.")
+            return
+        }
+        
+        if UIApplication.sharedApplication().canOpenURL(instagramUrl) {
+            print("Found")
+        } else {
+            print("Nooooooooo")
+        }
     }
-    */
 
 }

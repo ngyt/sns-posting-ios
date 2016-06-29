@@ -70,13 +70,32 @@
                                     <action selector="onBackButton:" destination="AN1-N1-QNR" eventType="touchUpInside" id="ODe-jN-RUD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zF-aD-kFa">
+                                <rect key="frame" x="137" y="518" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jKQ-zb-bBt">
+                                <rect key="frame" x="40" y="164" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="R85-xP-Sai"/>
+                                    <constraint firstAttribute="width" constant="240" id="ULc-fO-PNR"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="syw-91-Agf" firstAttribute="leading" secondItem="if9-7f-vRt" secondAttribute="leading" constant="20" id="06f-3N-AWK"/>
+                            <constraint firstItem="6wM-oX-UZP" firstAttribute="top" secondItem="2zF-aD-kFa" secondAttribute="bottom" constant="20" id="cnj-0g-gCa"/>
+                            <constraint firstItem="2zF-aD-kFa" firstAttribute="centerX" secondItem="if9-7f-vRt" secondAttribute="centerX" id="d0I-Uc-o6U"/>
+                            <constraint firstItem="jKQ-zb-bBt" firstAttribute="centerX" secondItem="if9-7f-vRt" secondAttribute="centerX" id="jsn-7J-ZqP"/>
+                            <constraint firstItem="jKQ-zb-bBt" firstAttribute="centerY" secondItem="if9-7f-vRt" secondAttribute="centerY" id="l1m-xu-grN"/>
                             <constraint firstItem="syw-91-Agf" firstAttribute="top" secondItem="if9-7f-vRt" secondAttribute="top" constant="20" id="wdA-as-JTZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="jKQ-zb-bBt" id="9ez-AB-45U"/>
+                        <outlet property="shareButton" destination="2zF-aD-kFa" id="HB7-hl-xXL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFq-A8-2eI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
