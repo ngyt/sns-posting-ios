@@ -9,6 +9,7 @@ class InstagramServiceViewController: BasicViewController {
         
         if !instagramService.isAvailable() {
             showAlert(title: "Error", message: "Could not share via Instagram.")
+            shareButton.enabled = false
         }
         
         instagramService.setImage(image)
