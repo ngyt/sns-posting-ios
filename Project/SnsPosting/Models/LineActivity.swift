@@ -29,9 +29,8 @@ class LineActivity: UIActivity {
             pasteboard.setData(data, forPasteboardType: "public.png")
             lineUrlString = "line://msg/image/" + pasteboard.name
         } else {
-            var string: String = activityItems.flatMap{ $0 as? String }.joinWithSeparator(" ")
-            string = string.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-            lineUrlString = "line://msg/text/" + string
+            let string: String = activityItems.flatMap{ $0 as? String }.joinWithSeparator(" ")
+            lineUrlString = "line://msg/text/" + (string.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()) ?? "")
         }
         
         let url = NSURL(string: lineUrlString)!
